@@ -9,4 +9,8 @@ Trabalho feito para a disciplina de sistemas operacionais, onde era necessrio cr
  
  Rodar o comando: `docker exec -it sodocker_web_1 php artisan migrate:refresh --seed`
  
+ Acessar a página `http://localhost:8000` 
+ 
+ Ver o resultado e apreciar os gatinhos!
+ 
 [MIT license](https://opensource.org/licenses/MIT).
