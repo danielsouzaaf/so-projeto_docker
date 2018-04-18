@@ -1,0 +1,19 @@
+version: '2' 
+services:
+  db:
+    image: postgres:9.6-alpine
+    ports:
+      - "6969:5432"
+    environment:
+      - "POSTGRES_DB=so_docker"
+  web:
+    build: .
+    command: php artisan serve --host 0.0.0.0
+    volumes:
+      - .:/app
+    ports:
+      - "8000:8000"
+    depends_on:
+      - db
+    environment:
+      - "TZ=America/Sao_Paulo"
