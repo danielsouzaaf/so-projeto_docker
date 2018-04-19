@@ -3,11 +3,12 @@
 Trabalho feito para a disciplina de sistemas operacionais, onde era necessrio criar um contêiner de banco de dados e um contêiner de aplicação web e fazer a conexo entre ambos.
 
 ## Como reproduzir?
- Rodar o comando: `docker-compose up -p sodocker`
+
+ Rodar o comando: `docker-compose -p sodocker run --user $UID --rm web composer install`
+
+ Rodar o comando: `docker-compose -p sodocker up `
  
  Rodar o comando: `cp .env.example .env`
- 
- Rodar o comando: `docker exec -it sodocker_web_1 composer install`
  
  Rodar o comando: `docker exec -it sodocker_web_1 php artisan key:generate`
  
